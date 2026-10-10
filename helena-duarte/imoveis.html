@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imóveis em Botucatu | Helena Duarte Corretora de Imóveis</title>
+  <meta name="description" content="Casas e apartamentos à venda e para locação em Botucatu e região. Pesquise por bairro, tipo, dormitórios e valor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="topo"></header>
+
+  <main class="pagina">
+    <div class="wrap">
+      <nav class="trilha" aria-label="Você está em"><a href="index.html">Início</a><span>›</span><span id="trilha-atual">Imóveis</span></nav>
+      <div class="lista__cabeca">
+        <h1 id="lista-titulo">Imóveis em Botucatu</h1>
+        <p id="lista-contagem" class="sub-secao"></p>
+      </div>
+      <p class="aviso" id="aviso-cod" hidden></p>
+
+      <div class="lista">
+        <form class="filtros-lado" id="filtros">
+          <p class="filtros-lado__titulo">Filtrar</p>
+          <label>Finalidade
+            <select name="fin"><option value="">Todas</option><option value="venda">Comprar</option><option value="locacao">Alugar</option></select>
+          </label>
+          <label>Tipo<select name="tipo" id="f-tipo"><option value="">Todos</option></select></label>
+          <label>Bairro<select name="bairro" id="f-bairro"><option value="">Todos</option></select></label>
+          <label>Dormitórios
+            <div class="chips" id="f-quartos">
+              <button type="button" data-v="" class="ativo">Todos</button>
+              <button type="button" data-v="1">1+</button>
+              <button type="button" data-v="2">2+</button>
+              <button type="button" data-v="3">3+</button>
+              <button type="button" data-v="4">4+</button>
+            </div>
+          </label>
+          <label>Valor máximo
+            <select name="max">
+              <option value="">Qualquer valor</option>
+              <option value="300000">Até R$ 300 mil</option>
+              <option value="500000">Até R$ 500 mil</option>
+              <option value="1000000">Até R$ 1 milhão</option>
+              <option value="2000000">Até R$ 2 milhões</option>
+            </select>
+          </label>
+          <button type="button" class="btn btn--linha btn--cheio" id="limpar">Limpar filtros</button>
+          <div class="filtros-lado__ajuda">
+            <p>Não achou o que procura?</p>
+            <a class="btn btn--acao btn--cheio" data-wa="procuro" href="#">Me conta no WhatsApp</a>
+          </div>
+        </form>
+
+        <div>
+          <div class="lista__barra">
+            <span id="lista-qtd"></span>
+            <label>Ordenar
+              <select id="ordem">
+                <option value="rec">Mais recentes</option>
+                <option value="menor">Menor valor</option>
+                <option value="maior">Maior valor</option>
+              </select>
+            </label>
+          </div>
+          <div class="grade grade--lista" id="grade"></div>
+          <div class="vazio" id="vazio" hidden>
+            <p><strong>Nenhum imóvel com esses filtros agora.</strong></p>
+            <p>A carteira completa não cabe no site, e o imóvel certo pode chegar amanhã.</p>
+            <a class="btn btn--acao" data-wa="procuro" href="#">Me diga o que você procura</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comum.js"></script>
+  <script src="assets/js/lista.js"></script>
+</body>
+</html>

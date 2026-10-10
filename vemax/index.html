@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vemax Usinagem — Usinagem de precisão em Botucatu</title>
+  <meta name="description" content="Usinagem, tornearia CNC, caldeiraria e metrologia com certificação ISO 9001 e AS9100. Peças sob medida entregues no prazo. Botucatu, SP.">
+  <meta name="theme-color" content="#0a1a3d">
+  <link rel="alternate" hreflang="en" href="en/index.html">
+  <link rel="icon" href="assets/img/simbolo-azul.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>try{if(/[?&]intro\b/.test(location.search)||!sessionStorage.getItem('vemaxIntro'))document.documentElement.classList.add('intro-on')}catch(e){document.documentElement.classList.add('intro-on')}</script>
+  <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
+</head>
+<body class="has-hero">
+  <div class="intro" id="intro" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="intro__dim" aria-hidden="true"></div>
+    <div class="intro__bar intro__bar--t" aria-hidden="true"></div>
+    <div class="intro__bar intro__bar--b" aria-hidden="true"></div>
+    <i class="intro__kerf" aria-hidden="true"></i>
+    <canvas class="intro__sparks" aria-hidden="true"></canvas>
+    <div class="intro__blade" aria-hidden="true"><svg viewBox="-100 -100 200 200"><defs>
+<radialGradient id="vmBl" cx="0" cy="0" r="96" gradientUnits="userSpaceOnUse"><stop offset=".25" stop-color="#7d848c"/><stop offset=".8" stop-color="#b9bfc6"/><stop offset=".9" stop-color="#d9dde1"/><stop offset="1" stop-color="#f1f3f5"/></radialGradient>
+<linearGradient id="vmBs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".62" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
+</defs><g class="intro__blade-rot"><path d="M84.00 0.00L95.39 10.83L93.75 11.84L82.97 13.14L82.97 13.14L92.52 25.62L90.75 26.36L79.89 25.96L79.89 25.96L87.37 39.78L85.51 40.24L74.84 38.14L74.84 38.14L80.07 52.96L78.16 53.12L67.96 49.37L67.96 49.37L70.80 64.83L68.89 64.69L59.40 59.40L59.40 59.40L59.79 75.11L57.92 74.67L49.37 67.96L49.37 67.96L47.30 83.54L45.53 82.81L38.14 74.84L38.14 74.84L33.65 89.91L32.01 88.91L25.96 79.89L25.96 79.89L19.17 94.07L17.71 92.83L13.14 82.97L13.14 82.97L4.22 95.91L2.97 94.45L0.00 84.00L0.00 84.00L-10.83 95.39L-11.84 93.75L-13.14 82.97L-13.14 82.97L-25.62 92.52L-26.36 90.75L-25.96 79.89L-25.96 79.89L-39.78 87.37L-40.24 85.51L-38.14 74.84L-38.14 74.84L-52.96 80.07L-53.12 78.16L-49.37 67.96L-49.37 67.96L-64.83 70.80L-64.69 68.89L-59.40 59.40L-59.40 59.40L-75.11 59.79L-74.67 57.92L-67.96 49.37L-67.96 49.37L-83.54 47.30L-82.81 45.53L-74.84 38.14L-74.84 38.14L-89.91 33.65L-88.91 32.01L-79.89 25.96L-79.89 25.96L-94.07 19.17L-92.83 17.71L-82.97 13.14L-82.97 13.14L-95.91 4.22L-94.45 2.97L-84.00 0.00L-84.00 0.00L-95.39 -10.83L-93.75 -11.84L-82.97 -13.14L-82.97 -13.14L-92.52 -25.62L-90.75 -26.36L-79.89 -25.96L-79.89 -25.96L-87.37 -39.78L-85.51 -40.24L-74.84 -38.14L-74.84 -38.14L-80.07 -52.96L-78.16 -53.12L-67.96 -49.37L-67.96 -49.37L-70.80 -64.83L-68.89 -64.69L-59.40 -59.40L-59.40 -59.40L-59.79 -75.11L-57.92 -74.67L-49.37 -67.96L-49.37 -67.96L-47.30 -83.54L-45.53 -82.81L-38.14 -74.84L-38.14 -74.84L-33.65 -89.91L-32.01 -88.91L-25.96 -79.89L-25.96 -79.89L-19.17 -94.07L-17.71 -92.83L-13.14 -82.97L-13.14 -82.97L-4.22 -95.91L-2.97 -94.45L-0.00 -84.00L-0.00 -84.00L10.83 -95.39L11.84 -93.75L13.14 -82.97L13.14 -82.97L25.62 -92.52L26.36 -90.75L25.96 -79.89L25.96 -79.89L39.78 -87.37L40.24 -85.51L38.14 -74.84L38.14 -74.84L52.96 -80.07L53.12 -78.16L49.37 -67.96L49.37 -67.96L64.83 -70.80L64.69 -68.89L59.40 -59.40L59.40 -59.40L75.11 -59.79L74.67 -57.92L67.96 -49.37L67.96 -49.37L83.54 -47.30L82.81 -45.53L74.84 -38.14L74.84 -38.14L89.91 -33.65L88.91 -32.01L79.89 -25.96L79.89 -25.96L94.07 -19.17L92.83 -17.71L82.97 -13.14L82.97 -13.14L95.91 -4.22L94.45 -2.97L84.00 -0.00Z" fill="url(#vmBl)"/><path transform="rotate(0)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(0)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(90)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(90)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(180)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(180)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(270)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(270)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><circle r="34" fill="none" stroke="#5c636b" stroke-width="1"/><circle transform="rotate(45)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/><circle transform="rotate(165)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/><circle transform="rotate(285)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/></g>
+<circle r="84" fill="url(#vmBs)"/><circle r="15" fill="#2a2d31"/><circle r="9" fill="#0c0d0f"/></svg></div>
+    <div class="intro__inner">
+      <img class="intro__logo" data-step src="assets/img/simbolo-branco.png" alt="">
+      <h2 class="intro__title" id="intro-title">
+        <span class="intro__l">Feito para a Vemax.</span>
+        <span class="intro__l intro__l--2">Pensado para evoluir.</span>
+      </h2>
+      <p class="intro__badge" data-step><i></i>Prévia · em desenvolvimento</p>
+      <div class="intro__text">
+        <p class="intro__hello" data-step>Espero que gostem do resultado, time Vemax.</p>
+        <p data-step>Este projeto foi desenvolvido para representar a <b>qualidade</b>, a <b>precisão</b> e o <b>nível de trabalho</b> que fazem parte da Vemax.</p>
+        <p data-step>O que vocês vão ver agora é uma <b>prévia</b>: o site ainda está em desenvolvimento. Tenho várias ideias de evolução, novas funcionalidades e melhorias que podem ser implementadas conforme as necessidades da empresa.</p>
+        <p data-step>Se quiserem seguir com o projeto, podemos conversar e formalizar tudo em contrato. Fico à disposição para qualquer ajuste, ideia ou próximo passo.</p>
+      </div>
+      <p class="intro__sign" data-step>Riquelme Gabriel</p>
+      <button class="btn btn--light intro__go" type="button" data-step>Conhecer o novo site da Vemax<svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></button>
+    </div>
+  </div>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <aside class="rail is-over-hero">
+    <a class="rail__symbol" href="index.html" aria-label="Vemax">
+      <img class="on-light" src="assets/img/simbolo-escuro.png" alt="">
+      <img class="on-dark" src="assets/img/simbolo-branco.png" alt="">
+    </a>
+    <a class="rail__logo" href="index.html" aria-label="Vemax">
+      <img class="on-light" src="assets/img/logo-escuro.png" alt="">
+      <img class="on-dark" src="assets/img/logo-branco.png" alt="">
+    </a>
+    <button class="burger" type="button" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu" data-open="Abrir menu" data-close="Fechar menu">
+      <span></span><span></span><span></span>
+    </button>
+  </aside>
+
+  <nav class="menu" id="menu" aria-label="Menu" aria-hidden="true">
+    <ul class="menu__list">
+        <li><a href="index.html" aria-current="page">Início</a></li>
+        <li><a href="a-vemax.html">A Vemax</a></li>
+        <li><a href="estrutura.html">Estrutura</a></li>
+        <li><a href="servicos.html">Produtos e serviços</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="trabalhe-conosco.html">Trabalhe conosco</a></li>
+        <li><a href="compliance.html">Compliance</a></li>
+    </ul>
+    <div class="menu__foot">
+      <div>
+        <p class="t-eyebrow">Comercial</p>
+        <p><a href="https://wa.me/5514998742316">+55 (14) 99874-2316</a><br><a href="tel:+551438133735">+55 (14) 3813-3735</a><br><a href="mailto:contato@vemax.ind.br">contato@vemax.ind.br</a></p>
+      </div>
+      <div>
+        <p class="t-eyebrow">Endereço</p>
+        <p>Av. Waldemar Vizotto, 168<br>Jd. Santa Eliza — Botucatu, SP</p>
+        <div class="lang lang--menu" aria-label="Idioma">
+            <a href="index.html" lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span><a href="en/index.html" lang="en">EN</a>
+          </div>
+      </div>
+    </div>
+  </nav>
+  <div class="menu-scrim" aria-hidden="true"></div>
+
+  <header class="header">
+    <div class="header__util">
+      <div class="util__contact">
+        <a href="https://wa.me/5514998742316">WhatsApp (14) 99874-2316</a>
+        <a href="mailto:contato@vemax.ind.br">contato@vemax.ind.br</a>
+      </div>
+      <div class="util__links">
+        <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+        <a href="compliance.html">Compliance</a>
+        <div class="lang lang--header" aria-label="Idioma">
+            <a href="index.html" lang="pt-BR" aria-current="true">PT</a><span aria-hidden="true">/</span><a href="en/index.html" lang="en">EN</a>
+          </div>
+      </div>
+    </div>
+    <div class="header__main">
+      <a class="header__logo" href="index.html" aria-label="Vemax">
+        <img src="assets/img/logo-branco.png" alt="Vemax Usinagem" width="156" height="45">
+      </a>
+      <nav class="nav" aria-label="Navegação">
+          <div class="nav__item">
+            <a class="nav__link" href="a-vemax.html">A Vemax</a>
+            <div class="nav__sub">
+              <a href="a-vemax.html#historia">Nossa história</a>
+              <a href="a-vemax.html#filosofia">Missão, visão e valores</a>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a class="nav__link" href="estrutura.html">Estrutura</a>
+            <div class="nav__sub">
+              <a href="estrutura.html#engenharia">Engenharia</a>
+              <a href="estrutura.html#manufatura">Manufatura</a>
+              <a href="estrutura.html#certificacoes">Qualidade e certificações</a>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a class="nav__link" href="servicos.html">Serviços</a>
+            <div class="nav__sub">
+              <a href="servicos.html#usinagem">Usinagem</a>
+              <a href="servicos.html#tornearia-cnc">Tornearia CNC</a>
+              <a href="servicos.html#caldeiraria">Caldeiraria</a>
+              <a href="servicos.html#metrologia">Metrologia e ensaios</a>
+            </div>
+          </div>
+          <div class="nav__item">
+            <a class="nav__link" href="contato.html">Contato</a>
+          </div>
+        <a class="btn btn--blue nav__cta" href="contato.html#cotacao">Solicitar cotação</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="subbar" aria-label="Nesta página">
+    <a class="subbar__title" href="index.html">Vemax</a>
+    <nav class="subbar__nav"><a class="is-page" href="a-vemax.html">A Vemax</a><a class="is-page" href="estrutura.html">Estrutura</a><a class="is-page" href="servicos.html">Serviços</a><a class="is-page" href="contato.html">Contato</a></nav>
+  </div>
+  <div class="page">
+    <main id="conteudo">
+
+      <section class="hero hero--home" data-slides data-dur="9000">
+        <div class="hero__media">
+          <div class="slide is-active"><div class="media" data-label="Vídeo — assets/video/v-latao.mp4"><video muted loop playsinline autoplay preload="auto" poster="assets/img/fotos/poster-latao.jpg"><source src="assets/video/v-latao.mp4" type="video/mp4"></video></div></div>
+          <div class="slide"><div class="media" data-label="Vídeo — assets/video/v-dobra.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-dobra.jpg"><source src="assets/video/v-dobra.mp4" type="video/mp4"></video></div></div>
+          <div class="slide"><div class="media" data-label="Vídeo — assets/video/v-torno.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-torno.jpg"><source src="assets/video/v-torno.mp4" type="video/mp4"></video></div></div>
+          <div class="slide"><div class="media" data-label="Vídeo — assets/video/v-bw.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-bw.jpg"><source src="assets/video/v-bw.mp4" type="video/mp4"></video></div></div>
+        </div>
+        <div class="hero__content"><h1 class="t-hero">Usinagem de precisão.<br>Entregue no prazo.</h1></div>
+      </section>
+
+      <a class="callout" href="contato.html#cotacao">
+        <span class="t-callout">Tem um desenho em mãos? Solicite uma cotação</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg>
+        <span class="callout__tag">Resposta rápida pelo comercial</span>
+      </a>
+
+      <section class="section profile">
+        <div class="split">
+          <div class="panel profile__text">
+            <div class="stack">
+              <h2 class="t-section reveal">A Vemax</h2>
+              <p class="t-statement reveal">Fabricamos peças, conjuntos e equipamentos sob medida, com a exigência da indústria aeronáutica.</p>
+              <p class="muted reveal">Somos especializados em peças prismáticas e job shop: muitos itens diferentes, em pequenas quantidades, feitos exatamente como o cliente especificou.</p>
+              <a class="btn reveal" href="a-vemax.html">Conheça a Vemax</a>
+            </div>
+            <div class="facts">
+              <div><strong>1999</strong><span>início das atividades em Botucatu</span></div>
+              <div><strong>2006</strong><span>certificada ISO 9001 e AS9100</span></div>
+              <div><strong>8+</strong><span>tipos de material usinados</span></div>
+            </div>
+          </div>
+          <div class="showcase" data-part3d data-hint="Arraste para girar">
+            <div class="showcase__grid" aria-hidden="true"></div>
+            <img class="showcase__fallback" src="assets/img/peca-3d.png" alt="Modelo de uma peça usinada" width="1500" height="1040" loading="lazy">
+            <span class="showcase__tag"><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Modelo 3D · arraste para girar</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section name" id="nome" aria-labelledby="nome-title">
+        <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="vmGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f6fd0"/><stop offset="1" stop-color="#58b0ee"/></linearGradient></defs></svg>
+        <div class="panel name-head">
+          <h2 class="t-section reveal" id="nome-title">O nome já diz<br>o que a gente entrega.</h2>
+          <p class="name-head__text">VEMAX não é sigla por acaso. Cada parte do nome é um compromisso com quem compra da gente.</p>
+        </div>
+        <div class="name-grid">
+          <div class="reveal"><div class="vm-icon" aria-hidden="true">
+              <svg class="vm-icon__hex" viewBox="0 0 104 118"><path d="M52 2 100 30v58l-48 28L4 88V30z"/></svg>
+              <svg class="vm-icon__glyph" viewBox="0 0 48 48"><circle pathLength="1" cx="24" cy="27" r="15"/><path pathLength="1" d="M24 27V17M24 27l7 5M19 6h10M24 6v6M38 11l3-3"/></svg>
+            </div><b>VE</b><div><h3>Velocidade máxima</h3><p>No atendimento aos clientes. Prazo é prioridade.</p></div></div>
+          <div class="reveal"><div class="vm-icon" aria-hidden="true">
+              <svg class="vm-icon__hex" viewBox="0 0 104 118"><path d="M52 2 100 30v58l-48 28L4 88V30z"/></svg>
+              <svg class="vm-icon__glyph" viewBox="0 0 48 48"><path pathLength="1" d="M13.5 9h21l9 10.5-19.5 22.5L4.5 19.5z"/><path pathLength="1" d="M4.5 19.5h39M18 9l6 10.5L30 9M24 42 18 19.5M24 42l6-22.5"/></svg>
+            </div><b>MA</b><div><h3>Máxima qualidade</h3><p>Nos produtos entregues, com processo certificado e medição aferida.</p></div></div>
+          <div class="reveal"><div class="vm-icon" aria-hidden="true">
+              <svg class="vm-icon__hex" viewBox="0 0 104 118"><path d="M52 2 100 30v58l-48 28L4 88V30z"/></svg>
+              <svg class="vm-icon__glyph" viewBox="0 0 48 48"><path pathLength="1" d="M24 4l5.5 13.5 14.5 1-11 9.5 3.5 14.5-12.5-8-12.5 8 3.5-14.5-11-9.5 14.5-1z"/></svg>
+            </div><b>X</b><div><h3>Excelência</h3><p>Número 10 em algarismo romano: a excelência no atendimento ao cliente.</p></div></div>
+        </div>
+      </section>
+
+      <section class="section services" aria-labelledby="svc-title">
+        <div class="services__title"><h2 class="t-section reveal" id="svc-title">Produtos e serviços</h2></div>
+        <div class="split">
+          <div class="svc-list">
+            <a class="svc-row is-active" href="servicos.html#usinagem"><span class="svc-row__name"><sup>01/</sup>Usinagem</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></a>
+            <a class="svc-row" href="servicos.html#tornearia-cnc"><span class="svc-row__name"><sup>02/</sup>Tornearia CNC</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></a>
+            <a class="svc-row" href="servicos.html#caldeiraria"><span class="svc-row__name"><sup>03/</sup>Caldeiraria</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></a>
+            <a class="svc-row" href="servicos.html#metrologia"><span class="svc-row__name"><sup>04/</sup>Metrologia</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></a>
+            <a class="svc-row" href="servicos.html#ensaios"><span class="svc-row__name"><sup>05/</sup>Ensaios não destrutivos</span><svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></a>
+            <div class="svc-list__foot"><a class="btn" href="servicos.html">Todos os serviços</a></div>
+          </div>
+          <div class="svc-media">
+            <div class="media is-active " data-label="Vídeo — assets/video/p-usinagem.mp4"><video muted loop playsinline preload="metadata" data-svc poster="assets/img/fotos/p-usinagem.jpg"><source src="assets/video/p-usinagem.mp4" type="video/mp4"></video></div>
+            <div class="media " data-label="Vídeo — assets/video/p-tornearia.mp4"><video muted loop playsinline preload="metadata" data-svc poster="assets/img/fotos/p-tornearia.jpg"><source src="assets/video/p-tornearia.mp4" type="video/mp4"></video></div>
+            <div class="media " data-label="Vídeo — assets/video/p-caldeiraria.mp4"><video muted loop playsinline preload="metadata" data-svc poster="assets/img/fotos/p-caldeiraria.jpg"><source src="assets/video/p-caldeiraria.mp4" type="video/mp4"></video></div>
+            <div class="media " data-label="Foto · Metrologia — assets/img/fotos/servico-metrologia.jpg"><img src="assets/img/fotos/servico-metrologia.jpg" alt="Metrologia" loading="lazy"></div>
+            <div class="media " data-label="Foto · Ensaios — assets/img/fotos/servico-ensaios.jpg"><img src="assets/img/fotos/servico-ensaios.jpg" alt="Ensaios" loading="lazy"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section deadline" aria-labelledby="prazo-title">
+        <div class="split">
+          <div class="panel deadline__intro">
+            <div class="stack">
+              <p class="t-eyebrow">Por que a Vemax entrega no prazo</p>
+              <h2 class="t-section reveal" id="prazo-title">Prazo não é promessa.<br>É processo.</h2>
+            </div>
+            <p class="lead reveal">Nossa planta foi desenhada pra ser enxuta. Cada ordem de produção é acompanhada de perto, da programação à entrega.</p>
+          </div>
+          <div class="steps">
+            <div class="reveal"><span class="num"><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>01</span><div><h3>Lean Manufacturing</h3><p>One-piece-flow, trabalho padrão e SMED. Menos espera entre uma etapa e outra.</p></div></div>
+            <div class="reveal"><span class="num"><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>02</span><div><h3>Gestão on-time</h3><p>ERP, CRP e MES controlando capacidade e produção pra cumprir o prazo combinado.</p></div></div>
+            <div class="reveal"><span class="num"><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>03</span><div><h3>Engenharia CAD/CAM</h3><p>Programação CNC com MasterCAM e desenho de projetos em CAD, dentro de casa.</p></div></div>
+            <div class="reveal"><span class="num"><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>04</span><div><h3>5S no gemba</h3><p>Chão de fábrica organizado e padronizado, todos os dias.</p></div></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section duo">
+        <div class="split">
+          <div class="panel">
+            <p class="t-statement reveal">Certificados ISO 9001:2015 e AS9100D. A exigência da aviação em cada peça.</p>
+            <a class="btn" href="estrutura.html#certificacoes">Qualidade e certificações</a>
+          </div>
+          <div class="panel">
+            <p class="t-statement reveal">Do setor aeronáutico a projetos industriais, atendemos quem não pode esperar.</p>
+            <a class="btn" href="servicos.html#setores">Setores atendidos</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" aria-label="Galeria">
+        <div class="gallery__track">
+          <div class="gallery__slide media" data-label="Vídeo — assets/video/v-cnc.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-cnc.jpg"><source src="assets/video/v-cnc.mp4" type="video/mp4"></video></div>
+          <div class="gallery__slide media" data-label="Vídeo — assets/video/v-torno2.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-torno2.jpg"><source src="assets/video/v-torno2.mp4" type="video/mp4"></video></div>
+          <div class="gallery__slide media" data-label="Vídeo — assets/video/v-bw.mp4"><video muted loop playsinline preload="none" poster="assets/img/fotos/poster-bw.jpg"><source src="assets/video/v-bw.mp4" type="video/mp4"></video></div>
+        </div>
+        <div class="gallery__dots"></div>
+      </section>
+
+      <div class="marquee" aria-label="Materiais usinados: Aço carbono, Aço inox, Alumínio, Nylon, Celeron, Poliacetal, MDF, Isopor">
+        <div class="marquee__track"><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço carbono</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço inox</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Alumínio</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Nylon</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Celeron</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Poliacetal</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>MDF</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Isopor</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço carbono</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço inox</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Alumínio</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Nylon</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Celeron</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Poliacetal</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>MDF</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Isopor</span></div>
+        <div class="marquee__track" aria-hidden="true"><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço carbono</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço inox</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Alumínio</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Nylon</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Celeron</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Poliacetal</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>MDF</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Isopor</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço carbono</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Aço inox</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Alumínio</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Nylon</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Celeron</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Poliacetal</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>MDF</span><span><svg class="hex-mark" viewBox="0 0 18 20" aria-hidden="true"><path d="M9 1 17 5.5v9L9 19 1 14.5v-9z"/></svg>Isopor</span></div>
+      </div>
+
+      <section class="section contact" id="cotacao" aria-labelledby="contato-title">
+        <div class="split">
+          <div class="media " data-label="Foto · peças usinadas — assets/img/fotos/contato.jpg"><img src="assets/img/fotos/contato.jpg" alt="peças usinadas" loading="lazy"></div>
+          <div class="panel stack">
+            <h2 class="t-section" id="contato-title">Solicitar cotação</h2>
+            <p class="muted">Nossos consultores comerciais estão prontos pra atender.</p>
+
+            <form class="form" data-whatsapp="5514998742316" data-intro="Olá, Vemax! Gostaria de solicitar uma cotação.">
+              <div class="form-row">
+                <div class="field"><label for="f-nome">Nome *</label><input id="f-nome" name="nome" data-label="Nome" autocomplete="name" required></div>
+                <div class="field"><label for="f-empresa">Empresa</label><input id="f-empresa" name="empresa" data-label="Empresa" autocomplete="organization"></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="f-tel">Telefone / WhatsApp *</label><input id="f-tel" name="telefone" data-label="Telefone" type="tel" autocomplete="tel" required></div>
+                <div class="field"><label for="f-email">E-mail</label><input id="f-email" name="email" data-label="E-mail" type="email" autocomplete="email"></div>
+              </div>
+              <div class="field"><label for="f-msg">O que você precisa? *</label><textarea id="f-msg" name="mensagem" data-label="Pedido" placeholder="Peça, material, quantidade e prazo desejado" required></textarea></div>
+              <button class="btn btn--blue btn--block" type="submit">Enviar pelo WhatsApp</button>
+              <p class="form__note">Tem desenho técnico? Mande junto pelo WhatsApp ou para <a href="mailto:contato@vemax.ind.br"><u>contato@vemax.ind.br</u></a>. Ao enviar, você concorda com a <a href="privacidade.html"><u>Política de Privacidade</u></a>.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__main">
+        <div class="footer__brand">
+          <a class="footer__logo" href="index.html"><img src="assets/img/logo-branco.png" alt="Vemax Usinagem" width="220" height="63"></a>
+          <p class="footer__tagline">Soluções em manufatura desde 1999.</p>
+          <a class="btn btn--light footer__quote" href="contato.html#cotacao">Solicitar cotação</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__head">A Vemax</p>
+          <a href="a-vemax.html#historia">Nossa história</a>
+          <a href="a-vemax.html#filosofia">Missão, visão e valores</a>
+          <a href="estrutura.html">Estrutura</a>
+          <a href="estrutura.html#certificacoes">Qualidade e certificações</a>
+          <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__head">Serviços</p>
+          <a href="servicos.html#usinagem">Usinagem</a>
+          <a href="servicos.html#tornearia-cnc">Tornearia CNC</a>
+          <a href="servicos.html#caldeiraria">Caldeiraria</a>
+          <a href="servicos.html#metrologia">Metrologia e ensaios</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__head">Contato</p>
+          <a href="https://wa.me/5514998742316">+55 (14) 99874-2316</a>
+          <a href="tel:+551438133735">+55 (14) 3813-3735</a>
+          <a href="mailto:contato@vemax.ind.br">contato@vemax.ind.br</a>
+          <p>Av. Waldemar Vizotto, 168<br>Jd. Santa Eliza — Botucatu, SP</p>
+          <a href="compliance.html">Canal de denúncias</a>
+        </div>
+      </div>
+      <div class="footer__social" aria-label="Redes sociais">
+          <a href="https://www.instagram.com/vemax.oficial/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.351-.2 6.78-2.618 6.98-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="https://br.linkedin.com/company/vemax-usinagem" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://www.facebook.com/vemax.oficial/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://wa.me/5514998742316" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+          <a href="mailto:contato@vemax.ind.br" aria-label="E-mail"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v14H2zM2.6 5.6 12 13l9.4-7.4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="footer__bar">
+        <span>Vemax © <span data-year>2026</span>. Todos os direitos reservados.</span>
+        <span class="footer__legal">
+          <a href="termos.html">Termos de uso</a>
+          <a href="privacidade.html">Privacidade</a>
+        </span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js" defer></script>
+  <script type="module">
+/* Peça 3D da home — arraste para girar.
+   Se existir assets/models/peca.glb (modelo real da peça), ele é carregado no lugar do modelo
+   procedural abaixo (que foi montado a partir da imagem CAD enviada). */
+
+const box = document.querySelector('[data-part3d]');
+if (box) {
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { io.disconnect(); start(box); } }, { rootMargin: '500px' });
+    io.observe(box);
+  } else start(box);
+}
+
+async function start(box) {
+  const THREE = await import('three');
+  const { RoomEnvironment } = await import('three/addons/environments/RoomEnvironment.js');
+  const { OrbitControls } = await import('three/addons/controls/OrbitControls.js');
+  const { RoundedBoxGeometry } = await import('three/addons/geometries/RoundedBoxGeometry.js');
+  const { GLTFLoader } = await import('three/addons/loaders/GLTFLoader.js');
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let renderer;
+  try {
+    renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'low-power' });
+  } catch (e) { return; } // sem WebGL: fica a imagem estática
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.3;
+  const canvas = renderer.domElement;
+  canvas.setAttribute('role', 'img');
+  canvas.setAttribute('aria-label', box.dataset.hint || '3D');
+  box.appendChild(canvas);
+
+  const scene = new THREE.Scene();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  const key = new THREE.DirectionalLight(0xffffff, 1.6);
+  key.position.set(4, 7, 5);
+  scene.add(key, new THREE.AmbientLight(0xffffff, 0.35));
+
+  const camera = new THREE.PerspectiveCamera(30, 1, 0.1, 100);
+  const dir = new THREE.Vector3(0.62, 0.42, 0.78).normalize();
+  const controls = new OrbitControls(camera, canvas);
+  controls.enableZoom = false;
+  controls.enablePan = false;
+  controls.enableDamping = true;
+  controls.dampingFactor = 0.08;
+  controls.rotateSpeed = 0.9;
+  controls.autoRotate = !reduced;
+  controls.autoRotateSpeed = 1.2;
+  controls.target.set(0, 0.45, 0);
+  canvas.style.touchAction = 'pan-y'; // no celular, rolar a página na vertical continua funcionando
+
+  const steel = new THREE.MeshStandardMaterial({ color: 0xb9cbe6, metalness: 0.72, roughness: 0.34, envMapIntensity: 1.5 });
+  const part = new THREE.Group();
+  scene.add(part);
+
+  /* sombra suave no chão */
+  const shadowTex = (() => {
+    const c = document.createElement('canvas');
+    c.width = c.height = 256;
+    const g = c.getContext('2d');
+    const grad = g.createRadialGradient(128, 128, 10, 128, 128, 128);
+    grad.addColorStop(0, 'rgba(10,26,61,.55)');
+    grad.addColorStop(1, 'rgba(10,26,61,0)');
+    g.fillStyle = grad;
+    g.fillRect(0, 0, 256, 256);
+    return new THREE.CanvasTexture(c);
+  })();
+  const shadow = new THREE.Mesh(new THREE.PlaneGeometry(8, 5), new THREE.MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false }));
+  shadow.rotation.x = -Math.PI / 2;
+  scene.add(shadow);
+
+  function buildProcedural() {
+    const ext = (shape, depth) => new THREE.ExtrudeGeometry(shape, {
+      depth, bevelEnabled: true, bevelThickness: 0.035, bevelSize: 0.035, bevelSegments: 3, curveSegments: 56,
+    });
+    const flat = (geo, y) => { const m = new THREE.Mesh(geo, steel); m.rotation.x = -Math.PI / 2; m.position.y = y; part.add(m); return m; };
+    const circle = (x, y, r) => { const p = new THREE.Path(); p.absarc(x, y, r, 0, Math.PI * 2, false); return p; };
+
+    /* braço principal com furos e rasgo de alívio */
+    const arm = new THREE.Shape();
+    arm.moveTo(-1.9, 0.55);
+    arm.bezierCurveTo(-1.0, 0.55, -0.6, 0.3, 0, 0.3);
+    arm.bezierCurveTo(0.8, 0.3, 1.2, 0.8, 2.0, 0.8);
+    arm.absarc(2.0, 0, 0.8, Math.PI / 2, -Math.PI / 2, true);
+    arm.bezierCurveTo(1.2, -0.8, 0.8, -0.3, 0, -0.3);
+    arm.bezierCurveTo(-0.6, -0.3, -1.0, -0.55, -1.9, -0.55);
+    arm.absarc(-1.9, 0, 0.55, -Math.PI / 2, Math.PI / 2, true);
+    arm.holes.push(circle(-1.9, 0, 0.22), circle(2.0, 0, 0.34));
+    const slot = new THREE.Path();
+    slot.moveTo(-0.7, 0.1); slot.lineTo(0.9, 0.1);
+    slot.absarc(0.9, 0, 0.1, Math.PI / 2, -Math.PI / 2, true);
+    slot.lineTo(-0.7, -0.1);
+    slot.absarc(-0.7, 0, 0.1, -Math.PI / 2, Math.PI / 2, true);
+    arm.holes.push(slot);
+    flat(ext(arm, 0.24), 0);
+
+    /* garfo duplo à esquerda: segunda orelha + alma */
+    const lug = new THREE.Shape();
+    lug.moveTo(-1.1, 0.55); lug.lineTo(-1.1, -0.55); lug.lineTo(-1.9, -0.55);
+    lug.absarc(-1.9, 0, 0.55, -Math.PI / 2, Math.PI / 2, true);
+    lug.lineTo(-1.1, 0.55);
+    lug.holes.push(circle(-1.9, 0, 0.22));
+    flat(ext(lug, 0.2), 0.62);
+    const web = new THREE.Mesh(new RoundedBoxGeometry(0.28, 0.9, 1.14, 4, 0.05), steel);
+    web.position.set(-1.0, 0.45, 0);
+    part.add(web);
+
+    /* caixa aberta (bolsão) na parte de trás à esquerda */
+    const wall = (w, h, d, x, y, z) => {
+      const m = new THREE.Mesh(new RoundedBoxGeometry(w, h, d, 4, 0.04), steel);
+      m.position.set(x, y, z);
+      part.add(m);
+    };
+    wall(1.8, 0.14, 0.8, -0.3, 0.07, -0.7);     // piso
+    wall(1.8, 0.95, 0.13, -0.3, 0.47, -1.03);   // fundo
+    wall(0.13, 0.95, 0.8, -1.2, 0.47, -0.7);    // lateral esquerda
+    wall(0.13, 0.7, 0.8, 0.6, 0.35, -0.7);      // lateral direita (mais baixa)
+
+    /* flange vertical na ponta direita, com reforço */
+    wall(0.22, 1.1, 1.7, 3.0, 0.55, 0);
+    wall(0.55, 0.14, 1.0, 2.75, 0.07, 0);
+    const gusset = new THREE.Shape();
+    gusset.moveTo(0, 0); gusset.lineTo(0.7, 0); gusset.lineTo(0, 0.7); gusset.lineTo(0, 0);
+    const g = new THREE.Mesh(new THREE.ExtrudeGeometry(gusset, { depth: 0.14, bevelEnabled: true, bevelThickness: 0.025, bevelSize: 0.025, bevelSegments: 2 }), steel);
+    g.position.set(2.3, 0.2, -0.07);
+    part.add(g);
+
+    recenter(part);
+  }
+
+  function recenter(obj) {
+    const b = new THREE.Box3().setFromObject(obj);
+    const c = b.getCenter(new THREE.Vector3());
+    obj.position.set(-c.x, -b.min.y, -c.z);
+  }
+
+  function fitLoaded(obj) {
+    const b = new THREE.Box3().setFromObject(obj);
+    const size = b.getSize(new THREE.Vector3());
+    const scale = 5.4 / Math.max(size.x, size.y, size.z);
+    obj.scale.setScalar(scale);
+    const b2 = new THREE.Box3().setFromObject(obj);
+    const c = b2.getCenter(new THREE.Vector3());
+    obj.position.set(-c.x, -b2.min.y, -c.z);
+  }
+
+  /* resize / enquadramento */
+  function resize() {
+    const w = box.clientWidth, h = box.clientHeight;
+    if (!w || !h) return;
+    renderer.setSize(w, h, false);
+    camera.aspect = w / h;
+    const dist = (w / h < 1.15 ? 15 : 12.6);
+    camera.position.copy(dir).multiplyScalar(dist).add(controls.target);
+    camera.updateProjectionMatrix();
+  }
+  new ResizeObserver(resize).observe(box);
+
+  /* rotação automática pausa enquanto o usuário gira */
+  let idle;
+  controls.addEventListener('start', () => { controls.autoRotate = false; clearTimeout(idle); box.classList.add('is-dragging'); });
+  controls.addEventListener('end', () => {
+    box.classList.remove('is-dragging');
+    if (!reduced) idle = setTimeout(() => { controls.autoRotate = true; }, 4500);
+  });
+
+  let visible = true;
+  new IntersectionObserver((es) => { visible = es[0].isIntersecting; }).observe(box);
+  renderer.setAnimationLoop(() => {
+    if (!visible) return;
+    shadow.position.y = -0.02;
+    controls.update();
+    renderer.render(scene, camera);
+  });
+
+  /* tenta o modelo real; se não existir, usa o procedural */
+  const ready = () => { resize(); box.classList.add('is-3d'); };
+  if (!box.dataset.model) { buildProcedural(); ready(); return; }
+  const url = new URL(box.dataset.model, document.baseURI).href;
+  fetch(url, { method: 'HEAD' })
+    .then((r) => {
+      if (!r.ok) throw new Error('sem glb');
+      new GLTFLoader().load(url, (gltf) => {
+        gltf.scene.traverse((o) => { if (o.isMesh && !o.material.map) o.material = steel; });
+        fitLoaded(gltf.scene);
+        part.add(gltf.scene);
+        ready();
+      }, undefined, () => { buildProcedural(); ready(); });
+    })
+    .catch(() => { buildProcedural(); ready(); });
+}
+
+</script>
+</body>
+</html>

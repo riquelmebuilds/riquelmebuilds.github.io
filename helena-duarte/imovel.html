@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imóvel | Helena Duarte Corretora de Imóveis</title>
+  <meta name="description" content="Detalhes do imóvel: fotos, ficha técnica, descrição e contato direto com a corretora.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="pagina-imovel">
+  <header id="topo"></header>
+
+  <main class="pagina">
+    <div class="wrap" id="conteudo">
+      <!-- preenchido por imovel.js -->
+    </div>
+  </main>
+
+  <!-- tela cheia da galeria -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__fechar" id="lb-fechar" aria-label="Fechar">×</button>
+    <button class="lightbox__seta lightbox__seta--ant" id="lb-ant" aria-label="Foto anterior">‹</button>
+    <img id="lb-img" alt="">
+    <button class="lightbox__seta lightbox__seta--prox" id="lb-prox" aria-label="Próxima foto">›</button>
+    <p class="lightbox__cont" id="lb-cont"></p>
+  </div>
+
+  <!-- barra fixa no celular -->
+  <div class="barra-celular" id="barra-celular"></div>
+
+  <footer id="rodape"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comum.js"></script>
+  <script src="assets/js/imovel.js"></script>
+</body>
+</html>

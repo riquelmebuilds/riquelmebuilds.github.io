@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Helena Duarte | Corretora de imóveis em Botucatu</title>
+  <meta name="description" content="Helena Duarte, corretora de imóveis em Botucatu e região desde 2009. Casas, apartamentos e imóveis comerciais e rurais para comprar, vender ou alugar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header id="topo"></header>
+
+  <main>
+    <!-- HERÓI + BUSCA -->
+    <section class="heroi">
+      <div class="wrap heroi__in">
+        <div class="heroi__texto">
+          <p class="selo entrar">Corretora de imóveis · <span data-cfg="regiaoLonga"></span></p>
+          <h1 class="entrar">Seu próximo imóvel em <span data-cfg="cidade"></span>, com quem conhece cada rua.</h1>
+          <p class="heroi__sub entrar">Sou <span data-cfg="nome"></span>, corretora de imóveis (CRECI <span data-cfg="creciCompleto"></span>). Me diga o que procura em uma mensagem. Eu respondo com opções reais, sem cadastro e sem spam.</p>
+
+          <form class="busca entrar" id="busca" action="imoveis.html">
+            <label><span>Quero</span>
+              <select name="fin"><option value="venda">Comprar</option><option value="locacao">Alugar</option><option value="">Ver todos</option></select>
+            </label>
+            <label><span>Tipo</span>
+              <select name="tipo" id="busca-tipo"><option value="">Todos</option></select>
+            </label>
+            <label><span>Bairro</span>
+              <select name="bairro" id="busca-bairro"><option value="">Todos</option></select>
+            </label>
+            <button class="btn btn--acao">Buscar imóveis</button>
+          </form>
+
+          <div class="heroi__botoes entrar">
+            <a class="link-seta" data-wa="procuro" href="#">Prefiro falar direto no WhatsApp</a>
+            <a class="link-seta" href="#proprietario">Tenho um imóvel para vender ou alugar</a>
+          </div>
+        </div>
+        <div class="heroi__foto entrar">
+          <div class="foto foto--imovel"><img id="foto-heroi" alt=""></div>
+          <div class="heroi__cartao">
+            <img class="avatar" data-foto alt="">
+            <div>
+              <p class="heroi__cartao-nome" data-cfg="nome"></p>
+              <p class="heroi__cartao-sub">CRECI <span data-cfg="creciCompleto"></span> · desde <span data-cfg="desde"></span></p>
+            </div>
+            <span class="heroi__nota" id="nota-google"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BARRA DE CONFIANÇA -->
+    <section class="confianca">
+      <div class="wrap confianca__in" id="barra"></div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="secao" id="imoveis">
+      <div class="wrap">
+        <div class="imoveis__topo revelar">
+          <div>
+            <p class="sobretitulo">Imóveis em destaque</p>
+            <h2>Selecionados desta semana</h2>
+          </div>
+          <div class="filtros" role="tablist" aria-label="Filtrar imóveis">
+            <button class="filtro ativo" data-filtro="todos">Todos</button>
+            <button class="filtro" data-filtro="venda">Venda</button>
+            <button class="filtro" data-filtro="locacao">Locação</button>
+          </div>
+        </div>
+        <div class="grade" id="grade"></div>
+        <div class="centro mais revelar">
+          <a class="btn btn--linha" href="imoveis.html">Ver todos os imóveis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- BAIRROS -->
+    <section class="secao secao--areia">
+      <div class="wrap">
+        <div class="centro revelar">
+          <p class="sobretitulo">Onde eu atuo</p>
+          <h2>Conheça os bairros</h2>
+          <p class="sub-secao">Escolha um bairro e veja os imóveis disponíveis.</p>
+        </div>
+        <div class="bairros" id="bairros"></div>
+      </div>
+    </section>
+
+    <!-- PROPRIETÁRIO -->
+    <section class="secao secao--escura" id="proprietario">
+      <div class="wrap prop">
+        <div class="revelar">
+          <p class="sobretitulo">Para proprietários</p>
+          <h2>Tem um imóvel em <span data-cfg="cidade"></span> para vender ou alugar?</h2>
+          <p class="prop__texto">Anunciar em todo lugar ao mesmo tempo não é estratégia, é loteria. Trabalho com carteira selecionada, fotos que valorizam, anúncios dentro das regras do CRECI e retorno constante sobre cada interessado. Você sabe o que está acontecendo com o seu imóvel em cada etapa.</p>
+          <ul class="prop__lista">
+            <li><strong>Avaliação honesta</strong> de valor de mercado, sem inflar para captar.</li>
+            <li><strong>Divulgação profissional</strong> com fotos e descrição que vendem.</li>
+            <li><strong>Filtro de curiosos:</strong> só visita quem tem perfil para comprar.</li>
+          </ul>
+        </div>
+        <form class="cartao-form revelar" id="form-avaliacao">
+          <p class="cartao-form__titulo">Quero uma avaliação do meu imóvel</p>
+          <label>Seu nome<input name="nome" required autocomplete="name"></label>
+          <label>Tipo de imóvel
+            <select name="tipo"><option>Casa</option><option>Apartamento</option><option>Terreno</option><option>Comercial</option><option>Rural</option></select>
+          </label>
+          <label>Bairro<input name="bairro" placeholder="Ex.: Vila Assumpção"></label>
+          <label>Quero
+            <select name="fin"><option>Vender</option><option>Alugar</option><option>Ainda estou decidindo</option></select>
+          </label>
+          <button class="btn btn--acao btn--cheio">Pedir avaliação pelo WhatsApp</button>
+          <p class="cartao-form__nota">Sem custo e sem compromisso. A mensagem abre no seu WhatsApp.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section class="secao" id="sobre">
+      <div class="wrap sobre">
+        <div class="sobre__foto revelar">
+          <img data-foto alt="">
+          <div class="sobre__desde"><strong>Desde <span data-cfg="desde"></span></strong><span>em <span data-cfg="regiaoLonga"></span></span></div>
+        </div>
+        <div class="sobre__texto revelar">
+          <p class="sobretitulo">Quem é <span data-cfg="primeiroNome"></span></p>
+          <h2><span data-cfg="nome"></span></h2>
+          <div id="bio"></div>
+          <ul class="servicos" id="servicos"></ul>
+          <blockquote class="depo" id="depo"></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="secao secao--areia" id="duvidas">
+      <div class="wrap estreito">
+        <div class="revelar">
+          <p class="sobretitulo">Perguntas frequentes</p>
+          <h2>Antes de chamar</h2>
+        </div>
+        <div class="faq revelar">
+          <details>
+            <summary>Quanto custa o serviço de corretagem?</summary>
+            <div><p>Para quem compra ou aluga, meu atendimento não custa nada. A corretagem é paga pelo proprietário, conforme o padrão do mercado. Você ganha uma profissional do seu lado sem pagar por isso.</p></div>
+          </details>
+          <details>
+            <summary>Trabalha com financiamento?</summary>
+            <div><p>Sim. Oriento a simulação e a documentação desde a primeira conversa, para a aprovação não virar surpresa no fim.</p></div>
+          </details>
+          <details>
+            <summary>Que documentos preciso para começar a procurar?</summary>
+            <div><p>Nenhum para começar. Documentos entram na fase de proposta, e eu te passo a lista completa na hora certa, sem correria.</p></div>
+          </details>
+          <details>
+            <summary>Você só trabalha com os imóveis do site?</summary>
+            <div><p>Não. O site mostra os destaques. A carteira completa muda toda semana: me diga o que procura e eu te aviso quando entrar algo com o seu perfil.</p></div>
+          </details>
+          <details>
+            <summary>Como funciona se eu quiser vender meu imóvel com você?</summary>
+            <div><p>Começa com uma avaliação honesta e uma conversa sobre estratégia de venda. Você recebe tudo por escrito, incluindo como trabalho a divulgação e o retorno sobre interessados.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao" id="contato">
+      <div class="wrap contato">
+        <div class="revelar">
+          <p class="sobretitulo">Contato</p>
+          <h2>Uma mensagem resolve.</h2>
+          <p class="sub-secao">Procurando imóvel em <span data-cfg="cidade"></span>? Ou pensando em vender o seu? Me chame no WhatsApp: resposta rápida, atendimento direto comigo.</p>
+          <div class="contato__canais">
+            <a class="canal" data-wa="procuro" href="#"><span class="canal__icone" id="ic-wa"></span><span><strong>WhatsApp</strong><span data-cfg="whatsappDisplay"></span></span></a>
+            <a class="canal" id="link-fixo" href="#"><span class="canal__icone" id="ic-fone"></span><span><strong>Telefone</strong><span data-cfg="telefoneFixo"></span></span></a>
+            <a class="canal" id="link-email" href="#"><span class="canal__icone">@</span><span><strong>E-mail</strong><span data-cfg="email"></span></span></a>
+          </div>
+          <form class="form-linha" id="form-contato">
+            <input name="nome" placeholder="Seu nome" required autocomplete="name">
+            <input name="msg" placeholder="O que você procura?" required>
+            <button class="btn btn--acao">Enviar pelo WhatsApp</button>
+          </form>
+        </div>
+        <div class="mapa revelar">
+          <iframe id="mapa" title="Mapa do escritório" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <p class="mapa__end"><span data-cfg="endereco"></span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="rodape"></footer>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/comum.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>
