@@ -13,38 +13,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500&family=Barlow+Condensed:wght@500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  <script>try{if(/[?&]intro\b/.test(location.search)||!sessionStorage.getItem('vemaxIntro'))document.documentElement.classList.add('intro-on')}catch(e){document.documentElement.classList.add('intro-on')}</script>
   <script type="importmap">{"imports":{"three":"https://unpkg.com/three@0.160.0/build/three.module.js","three/addons/":"https://unpkg.com/three@0.160.0/examples/jsm/"}}</script>
 </head>
 <body class="has-hero">
-  <div class="intro" id="intro" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="intro-title">
-    <div class="intro__dim" aria-hidden="true"></div>
-    <div class="intro__bar intro__bar--t" aria-hidden="true"></div>
-    <div class="intro__bar intro__bar--b" aria-hidden="true"></div>
-    <i class="intro__kerf" aria-hidden="true"></i>
-    <canvas class="intro__sparks" aria-hidden="true"></canvas>
-    <div class="intro__blade" aria-hidden="true"><svg viewBox="-100 -100 200 200"><defs>
-<radialGradient id="vmBl" cx="0" cy="0" r="96" gradientUnits="userSpaceOnUse"><stop offset=".25" stop-color="#7d848c"/><stop offset=".8" stop-color="#b9bfc6"/><stop offset=".9" stop-color="#d9dde1"/><stop offset="1" stop-color="#f1f3f5"/></radialGradient>
-<linearGradient id="vmBs" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".5"/><stop offset=".42" stop-color="#fff" stop-opacity="0"/><stop offset=".62" stop-color="#000" stop-opacity=".28"/><stop offset="1" stop-color="#fff" stop-opacity=".18"/></linearGradient>
-</defs><g class="intro__blade-rot"><path d="M84.00 0.00L95.39 10.83L93.75 11.84L82.97 13.14L82.97 13.14L92.52 25.62L90.75 26.36L79.89 25.96L79.89 25.96L87.37 39.78L85.51 40.24L74.84 38.14L74.84 38.14L80.07 52.96L78.16 53.12L67.96 49.37L67.96 49.37L70.80 64.83L68.89 64.69L59.40 59.40L59.40 59.40L59.79 75.11L57.92 74.67L49.37 67.96L49.37 67.96L47.30 83.54L45.53 82.81L38.14 74.84L38.14 74.84L33.65 89.91L32.01 88.91L25.96 79.89L25.96 79.89L19.17 94.07L17.71 92.83L13.14 82.97L13.14 82.97L4.22 95.91L2.97 94.45L0.00 84.00L0.00 84.00L-10.83 95.39L-11.84 93.75L-13.14 82.97L-13.14 82.97L-25.62 92.52L-26.36 90.75L-25.96 79.89L-25.96 79.89L-39.78 87.37L-40.24 85.51L-38.14 74.84L-38.14 74.84L-52.96 80.07L-53.12 78.16L-49.37 67.96L-49.37 67.96L-64.83 70.80L-64.69 68.89L-59.40 59.40L-59.40 59.40L-75.11 59.79L-74.67 57.92L-67.96 49.37L-67.96 49.37L-83.54 47.30L-82.81 45.53L-74.84 38.14L-74.84 38.14L-89.91 33.65L-88.91 32.01L-79.89 25.96L-79.89 25.96L-94.07 19.17L-92.83 17.71L-82.97 13.14L-82.97 13.14L-95.91 4.22L-94.45 2.97L-84.00 0.00L-84.00 0.00L-95.39 -10.83L-93.75 -11.84L-82.97 -13.14L-82.97 -13.14L-92.52 -25.62L-90.75 -26.36L-79.89 -25.96L-79.89 -25.96L-87.37 -39.78L-85.51 -40.24L-74.84 -38.14L-74.84 -38.14L-80.07 -52.96L-78.16 -53.12L-67.96 -49.37L-67.96 -49.37L-70.80 -64.83L-68.89 -64.69L-59.40 -59.40L-59.40 -59.40L-59.79 -75.11L-57.92 -74.67L-49.37 -67.96L-49.37 -67.96L-47.30 -83.54L-45.53 -82.81L-38.14 -74.84L-38.14 -74.84L-33.65 -89.91L-32.01 -88.91L-25.96 -79.89L-25.96 -79.89L-19.17 -94.07L-17.71 -92.83L-13.14 -82.97L-13.14 -82.97L-4.22 -95.91L-2.97 -94.45L-0.00 -84.00L-0.00 -84.00L10.83 -95.39L11.84 -93.75L13.14 -82.97L13.14 -82.97L25.62 -92.52L26.36 -90.75L25.96 -79.89L25.96 -79.89L39.78 -87.37L40.24 -85.51L38.14 -74.84L38.14 -74.84L52.96 -80.07L53.12 -78.16L49.37 -67.96L49.37 -67.96L64.83 -70.80L64.69 -68.89L59.40 -59.40L59.40 -59.40L75.11 -59.79L74.67 -57.92L67.96 -49.37L67.96 -49.37L83.54 -47.30L82.81 -45.53L74.84 -38.14L74.84 -38.14L89.91 -33.65L88.91 -32.01L79.89 -25.96L79.89 -25.96L94.07 -19.17L92.83 -17.71L82.97 -13.14L82.97 -13.14L95.91 -4.22L94.45 -2.97L84.00 -0.00Z" fill="url(#vmBl)"/><path transform="rotate(0)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(0)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(90)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(90)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(180)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(180)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><path transform="rotate(270)" d="M0 -84V-64" stroke="#3b3f45" stroke-width="2.2" stroke-linecap="round"/><circle transform="rotate(270)" cx="0" cy="-62" r="2.6" fill="#3b3f45"/><circle r="34" fill="none" stroke="#5c636b" stroke-width="1"/><circle transform="rotate(45)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/><circle transform="rotate(165)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/><circle transform="rotate(285)" cx="0" cy="-44" r="5.5" fill="#1a1c1f"/></g>
-<circle r="84" fill="url(#vmBs)"/><circle r="15" fill="#2a2d31"/><circle r="9" fill="#0c0d0f"/></svg></div>
-    <div class="intro__inner">
-      <img class="intro__logo" data-step src="../assets/img/simbolo-branco.png" alt="">
-      <h2 class="intro__title" id="intro-title">
-        <span class="intro__l">Made for Vemax.</span>
-        <span class="intro__l intro__l--2">Built to evolve.</span>
-      </h2>
-      <p class="intro__badge" data-step><i></i>Preview · in development</p>
-      <div class="intro__text">
-        <p class="intro__hello" data-step>I hope you enjoy the result, Vemax team.</p>
-        <p data-step>This project was developed to represent the <b>quality</b>, <b>precision</b> and <b>standard of work</b> that are part of Vemax.</p>
-        <p data-step>What you are about to see is a <b>preview</b>: the website is still in development. I have many ideas for new features and improvements that can be implemented as the company’s needs grow.</p>
-        <p data-step>If you would like to move forward with the project, we can talk and formalize everything in a contract. I am at your disposal for any adjustment, idea or next step.</p>
-      </div>
-      <p class="intro__sign" data-step>Riquelme Gabriel</p>
-      <button class="btn btn--light intro__go" type="button" data-step>Explore the new Vemax website<svg class="arrow" viewBox="0 0 38 20" aria-hidden="true"><path d="M0 10h36M27 1l9 9-9 9"/></svg></button>
-    </div>
-  </div>
   <a class="skip-link" href="#conteudo">Skip to content</a>
 
   <aside class="rail is-over-hero">
